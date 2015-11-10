@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+<body>
+
+<main>
+	
+	<div class='control_panel'>
+		<div class='title'>PhysicsOnCanvas</div>
+		<div class='info'>
+			<a href='http://codepen.io/phenax/full/EVOwmq' style="color:red;font-size:16px;display:block;margin:5px auto;text-decoration:none;" target='_parent'>View in fullscreen</a>
+	    	<br />
+			Click anywhere to shoot ball.<br />
+			Speed of the ball is determined<br /> by the how far away your click<br /> was to the initial position of the ball.
+		</div>
+		<br />
+		<label>
+			<input type='checkbox' class='gravity' />
+			&nbsp;<span class='lbl_text'>Disable Gravity</span>
+		</label>
+		<div style='margin:15px auto;'>
+			<div>FrameRate<br />(applies on new balls)</div>
+			10 <input class='framerate' type='range' value='15' max=30 min=10 /> 30
+		</div>
+		<div class='position'>
+			<div style='font-size:14px;margin:4px auto;'>StartPoint<br />(applies on new balls)</div>
+			<label>
+				<input type='radio' name='pos' class='pos' value='tl' />
+				Top-Left
+			</label>
+			<label>
+				<input type='radio' name='pos' class='pos' value='tr' />
+				Top-Right
+			</label>
+			<br />
+			<label>
+				<input type='radio' name='pos' class='pos' value='bl' checked />
+				Bottom-Left
+			</label>
+			<label>
+				<input type='radio' name='pos' class='pos' value='br' />
+				Bottom-Right
+			</label>
+		</div>
+		<br />
+		<label>
+			<input type='checkbox' class='goofy' />
+			Enable goofy physics mode
+		</label>
+	</div>
+
+	<div class='data_disp'>
+		<div>x: <span id='x'>0</span></div>
+		<div>y: <span id='y'>0</span></div>
+		<div>vel_x: <span id='x_vel'>0</span></div>
+		<div>vel y: <span id='y_vel'>0</span></div>
+		<div>speed: <span id='speed'>0</span></div>
+	</div>
+
+	<canvas id="canv">
+		Sorry, HTML5 canvas is not supported on your browser.
+	</canvas>
+
+</main>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
